@@ -16,7 +16,7 @@
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if(not root):
-            return 0
+            return 0l
         q = deque([root]) 
         level = 0
         while(q):
