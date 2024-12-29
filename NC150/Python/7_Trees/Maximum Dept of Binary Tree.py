@@ -6,17 +6,17 @@
 #         self.right = right
 
 # Recursice DFS
-# class Solution:
-#     def maxDepth(self, root: Optional[TreeNode]) -> int:
-#         if(not root):
-#             return 0
-#         return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if(not root):
+            return 0
+        return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
 
 # Iterative BFS (level order)
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if(not root):
-            return 0l
+            return 0
         q = deque([root]) 
         level = 0
         while(q):
