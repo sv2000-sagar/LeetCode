@@ -13,12 +13,12 @@ class Solution:
             if course in visited:
                 return True
             
-            cycle.add(course)
+            cycle.add(course) # current DFS path
             for pre in preMap[course]:
                 if(dfs(pre) == False):
                     return False
             cycle.remove(course)
-            visited.add(course)
+            visited.add(course) # fully procecessed i.e met all prereq
             res.append(course)
             return True
         
