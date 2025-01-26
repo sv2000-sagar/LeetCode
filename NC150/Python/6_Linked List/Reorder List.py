@@ -28,8 +28,7 @@ class Solution:
 
     # merging both lists
         first, second = head, prev #(prev is starting node of second list)
-        while(second):
-            print(1)
+        while(second): # nodes in list 2 may be less than list 1
             temp1, temp2 = first.next, second.next
             first.next = second
             second.next = temp1

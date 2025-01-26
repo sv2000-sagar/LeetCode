@@ -9,9 +9,11 @@ class Solution:
         dummy = ListNode(0,head)
         left = dummy
         right = head
+        # creating offset of n b/w left and right
         while(n>0 and right):
             right = right.next
             n-=1
+        # left -> node before deleted node
         while(right):
             left = left.next
             right = right.next
