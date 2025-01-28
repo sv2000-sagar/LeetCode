@@ -9,7 +9,9 @@ class Solution:
         if(not lists):
             return None
         while(len(lists)>1):
-            mergedLists = []
+            mergedLists = [] # Temporary list to store merged lists at the current level.
+            
+            # Iterate through the input lists in pairs (step size = 2)
             for i in range(0,len(lists),2):
                 l1 = lists[i]
                 l2 = lists[i+1] if (i+1) < len(lists) else None
