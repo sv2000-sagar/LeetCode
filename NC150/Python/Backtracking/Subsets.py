@@ -1,4 +1,5 @@
-# Time: O(n*2^n)
+# Time: O(2^T) 
+    
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
