@@ -13,7 +13,7 @@ class Solution:
                 return max(dfs(i+1,j), dfs(i,j+1)) # max from down and right
         return dfs(0,0)
 
-# Bottom Up
+# Top Down
 # Time: O(n*m)
 # Space: O(m*n)
 class Solution:
@@ -33,7 +33,7 @@ class Solution:
                 return cache[i][j]
         return dfs(0,0)
 
-# Top Down
+# Bottom Up
 # Time: O(n*m)
 # Space: O(m*n)
 class Solution:
