@@ -5,14 +5,14 @@
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         summ,maxL = 0,0
-        prefixSumMap = {} # sum -> idx
+        prefixSumMap = {}
         for i in range(len(nums)):
             if(nums[i] == 0):
                 nums[i] = -1
             summ += nums[i]
             if(summ == 0):
                 maxL = max(maxL,i+1)
-            rem = summ - 0
+            rem = summ - 0 # sum - k
             if(rem in prefixSumMap):
                 maxL = max(maxL,i-prefixSumMap[rem])
             else:
