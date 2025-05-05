@@ -1,10 +1,10 @@
 # Time: O(n log n + n log D) ,  where D = (stalls[-1] – stalls[0]).
 
-def canWePlace(arr,k,dist):
+def canWePlace(arr,k,minDist):
     cowsCount = 1
     lastCow = arr[0]
     for i in range(1,len(arr)):
-        if(arr[i] - lastCow >= dist):
+        if(arr[i] - lastCow >= minDist):
             cowsCount +=1
             lastCow = arr[i]
             if(cowsCount == k):
