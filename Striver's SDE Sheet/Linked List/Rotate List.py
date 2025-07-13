@@ -8,20 +8,19 @@ class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         if(not head):
             return head
-            
-        length,cur = 1,head
-        while(cur.next):
-            length +=1
-            cur = cur.next
+        tail = head
+        length = 1
+        # Get Length
+        while(tail.next):
+            length+=1
+            tail = tail.next
         k = k % length
-        if(k == 0):
-            return head
-        cur.next = head # last node -> first node
-        pivot = length-k
+        if(k == 0): return head
         cur = head
-        while(pivot > 1):
+        # move to the pivot and rotate
+        for i in range(0,length-k-1):
             cur = cur.next
-            pivot -=1
-        newHead = cur.next # pivot node next is newHead
-        cur.next = None # pivot node next to null
-        return newHead    
+        newHead = cur.next
+        cur.next = None
+        tail.next = head
+        return newHead
