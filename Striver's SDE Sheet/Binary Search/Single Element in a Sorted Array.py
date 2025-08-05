@@ -2,11 +2,11 @@
 class Solution:
     def singleNonDuplicate(self, nums: List[int]) -> int:
         # edge cases
-        if(len(nums) == 1):
+        if(len(nums) == 1): # one ele
             return nums[0]
-        if(nums[0] != nums[1]):
+        if(nums[0] != nums[1]): # first ele
             return nums[0]
-        if(nums[len(nums)-1] != nums[len(nums)-2]):
+        if(nums[len(nums)-1] != nums[len(nums)-2]): # last ele
             return nums[len(nums)-1]
         l,r = 1, len(nums)-2
         while(l <= r):
@@ -19,4 +19,4 @@ class Solution:
                  mid % 2 != 0 and nums[mid] == nums[mid-1]):
                 l = mid+1 # eliminate left
             else:
-                r = mid-1
+                r = mid-1   
